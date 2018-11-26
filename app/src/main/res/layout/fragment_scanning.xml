@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimaryDark"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/scanning_number_edt"
+            android:layout_width="200dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/edittext_background"
+            android:drawableLeft="@drawable/chat_content_iocn_search"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/scanning_search_tv"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextView_16dp"
+            android:text="公司名称：" />
+
+        <TextView
+            android:id="@+id/scanning_name_tv"
+            style="@style/TextView_16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <TextView
+            style="@style/TextView_16dp"
+            android:text="限定数量：" />
+
+        <EditText
+            android:id="@+id/scanning_shuliang_edt"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/txt_shape"
+            android:inputType="number"
+            android:paddingLeft="@dimen/dp_10"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/scanning_delete_btn"
+            android:layout_width="100dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="清空列表"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_marginRight="@dimen/dp_6"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_6">
+
+        <TextView
+            style="@style/TextView_16dp"
+            android:layout_gravity="center"
+            android:text="扫描：" />
+
+        <TextView
+            android:id="@+id/saomiao_tv"
+            style="@style/TextView_16dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            style="@style/TextView_16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="剩余：" />
+
+        <TextView
+            android:id="@+id/shengyu_tv"
+            style="@style/TextView_16dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/shuru_btn"
+            android:layout_width="100dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="手动输入"
+            android:textSize="@dimen/sp_16"
+            android:background="@drawable/btn_shape_login"
+            android:textColor="#fff"
+            />
+    </LinearLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/scanning_lrv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_weight="1"
+        android:background="#f7f7f7" />
+
+    <Button
+        android:id="@+id/scanning_btn"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/btn_shape_login"
+        android:text="导出数据"
+        android:textColor="#fff"
+        android:textSize="@dimen/dp_18" />
+</LinearLayout>
